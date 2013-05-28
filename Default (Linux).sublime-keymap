@@ -1,3 +1,9 @@
 [
-  { "keys": ["ctrl+alt+t"], "command": "tr8n" }
+  { "keys": ["ctrl+alt+t", "ctrl+alt+t"], "command": "tr8n_help"      },
+  { "keys": ["ctrl+alt+t", "ctrl+alt+h"], "command": "tr8n_host"      },
+  { "keys": ["ctrl+alt+t", "ctrl+alt+l"], "command": "tr8n_lookup"    },
+  { "keys": ["ctrl+alt+t", "ctrl+alt+i"], "command": "tr8n_login"     },
+  { "keys": ["ctrl+alt+t", "ctrl+alt+a"], "command": "tr8n_app"       },
+  { "keys": ["ctrl+alt+t", "ctrl+alt+r"], "command": "tr8n_register"  },
+  { "keys": ["ctrl+alt+t", "ctrl+alt+o"], "command": "tr8n_logout"    }
 ]
