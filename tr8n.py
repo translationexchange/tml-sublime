@@ -254,7 +254,7 @@ class Tr8nRegisterApiCall(threading.Thread):
 
   def run(self):
     try:
-      query = urllib.urlencode({'access_token': self.access_token, 'app_key': self.app_key, 'label': self.label, 'description': self.description})
+      query = urllib.urlencode({'access_token': self.access_token, 'client_id': self.app_key, 'label': self.label, 'description': self.description})
       request = urllib2.Request('http://' + self.host + '/tr8n/api/v1/translation_key/register', query, headers={"User-Agent": "Sublime Tr8n"})
       http_file = urllib2.urlopen(request, timeout=self.timeout)
       data = json.loads(http_file.read())
@@ -272,7 +272,6 @@ class Tr8nRegisterApiCall(threading.Thread):
         err = '%s: URL error %s contacting API' % (__name__, str(e.reason))
 
     sublime.error_message(err)
-
 
 class Tr8nRegisterCommand(sublime_plugin.TextCommand):
   def run(self, edit):
